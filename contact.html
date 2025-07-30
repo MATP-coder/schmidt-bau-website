@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt – Schmidt‑Bau Freiburg</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="navbar">
-    <div style="display:flex; align-items:center;">
-      <img src="logo.png" alt="Schmidt‑Bau Freiburg Logo" class="logo">
-      <h1>Schmidt‑Bau Freiburg</h1>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Startseite</a>
-      <a href="services.html">Leistungen</a>
-      <a href="about.html">Über uns</a>
-      <a href="team.html">Team</a>
-      <a href="contact.html">Kontakt</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <section>
-      <h2 class="section-title">Kontakt</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <p>Schmidt‑Bau Freiburg GmbH<br>Stegenbachstraße 40<br>79232 March‑Buchheim</p>
-          <p>Telefon: <a href="tel:+4976659344880">0 76 65 / 93 44 88 0</a></p>
-          <p>E‑Mail: <a href="mailto:info@schmidt-bau-freiburg.de">info@schmidt-bau-freiburg.de</a></p>
-        </div>
-        <form action="mailto:info@schmidt-bau-freiburg.de" method="post" enctype="text/plain">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Ihr Name" required>
-          <label for="email">E‑Mail</label>
-          <input type="email" id="email" name="email" placeholder="Ihre E‑Mail" required>
-          <label for="message">Nachricht</label>
-          <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
-          <button type="submit">Senden</button>
-        </form>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Schmidt‑Bau Freiburg</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <div style="display:flex; align-items:center;">
+        <img src="logo.png" alt="Schmidt‑Bau Freiburg Logo" class="logo">
+        <h1>Schmidt‑Bau Freiburg</h1>
       </div>
-    </section>
-    <section>
-      <h2 class="section-title">Anfahrt</h2>
-      <iframe
-        src="https://maps.google.com/maps?q=Stegenbachstraße%2040%2079232%20March-Buchheim&output=embed"
-        width="100%" height="300" style="border:0;" allowfullscreen=""
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <p>Hinweis: Die Kartenansicht nutzt Google Maps. Mit dem Aufruf werden Daten an Google übertragen.</p>
-    </section>
-  </div>
+      <nav class="nav-links">
+        <a href="index.html">Startseite</a>
+        <a href="services.html">Leistungen</a>
+        <a href="about.html">Über&nbsp;uns</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+    </header>
 
-  <footer>
-    <p>© 2025 Schmidt‑Bau Freiburg GmbH · Stegenbachstraße 40 · 79232 March‑Buchheim · Tel. 0 76 65 / 93 44 88 0</p>
-  </footer>
-</body>
+    <div class="container">
+      <section class="scroll-reveal">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <p>Schmidt‑Bau Freiburg GmbH<br>Stegenbachstraße 40<br>79232 March‑Buchheim</p>
+            <p>Telefon: <a href="tel:+4976659344880">0 76 65 / 93 44 88 0</a></p>
+            <p>E‑Mail: <a href="mailto:info@schmidt-bau-freiburg.de">info@schmidt-bau-freiburg.de</a></p>
+          </div>
+          <form action="mailto:info@schmidt-bau-freiburg.de" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+            <label for="email">E‑Mail</label>
+            <input type="email" id="email" name="email" placeholder="Ihre E‑Mail" required>
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+            <button type="submit">Senden</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="scroll-reveal">
+        <h2 class="section-title">Anfahrt</h2>
+        <iframe
+          src="https://maps.google.com/maps?q=Stegenbachstraße%2040%2079232%20March-Buchheim&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Hinweis: Die Kartenansicht nutzt Google Maps. Mit dem Aufruf werden Daten an Google übertragen.</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2025 Schmidt‑Bau Freiburg GmbH · Stegenbachstraße 40 · 79232 March‑Buchheim · Tel. 0 76 65 / 93 44 88 0</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -12,13 +12,13 @@
 
 /* Root variables for colours */
 :root {
-  /* Corporate colours inspired by the Schmidt‑Bau Logo */
-  --primary: #e3d820;    /* warm yellow background from logo */
-  --secondary: #c6b514;  /* darker yellow for gradients */
-  --accent: #c22b1d;     /* red square from logo */
-  --accent-dark: #a11f18;/* darker red for hover states */
-  --bg-light: #fffbea;   /* very light yellow for page background */
-  --text-dark: #222;     /* dark text for readability */
+  /* Corporate colours sampled directly from the official Schmidt‑Bau logo */
+  --primary: #ECE424;    /* bright yellow used throughout the logo */
+  --secondary: #D8C820;  /* slightly darker yellow for subtle accents */
+  --accent: #C61800;     /* red square from the logo */
+  --accent-dark: #A11200;/* darker red for hover states */
+  --bg-light: #FFFBE6;   /* soft light yellow for page backgrounds */
+  --text-dark: #111;     /* rich dark colour for maximum contrast */
 }
 
 /* Global resets */
@@ -81,7 +81,10 @@ a:hover {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--primary) 100%);
+  /* Use the abstract hero graphic as a backdrop and overlay with the brand yellow */
+  background-image: linear-gradient(rgba(236,228,36,0.92), rgba(236,228,36,0.92)), url('hero.png');
+  background-size: cover;
+  background-position: center;
   color: var(--text-dark);
   padding: 5rem 2rem 6rem;
   text-align: center;
@@ -125,7 +128,7 @@ section {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: var(--primary);
+  color: var(--accent);
 }
 
 /* About section */
@@ -153,7 +156,8 @@ section {
 
 .about-image {
   flex: 1 1 40%;
-  background: linear-gradient(135deg, #e1e8f0, #cfd8e3);
+  /* Subtle gradient using the brand colours */
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   min-height: 250px;
   border-radius: 6px;
 }
@@ -255,7 +259,7 @@ form textarea {
 }
 
 form button {
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: #fff;
   border: none;
   padding: 0.8rem 2rem;
@@ -267,7 +271,7 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--secondary);
+  background-color: var(--accent-dark);
 }
 
 /* Footer */
@@ -304,4 +308,62 @@ footer p {
   .hero p {
     font-size: 1.3rem;
   }
+}
+
+/* Scroll reveal animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Testimonials section */
+.testimonials {
+  background-color: #fff;
+  padding: 3rem 2rem;
+}
+
+.testimonials h2 {
+  margin-bottom: 2rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: var(--bg-light);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  position: relative;
+  font-style: italic;
+}
+
+.testimonial::before {
+  content: "\201C"; /* left quote mark */
+  font-size: 3rem;
+  color: var(--accent);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.testimonial p {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.testimonial .author {
+  font-weight: 600;
+  color: var(--accent);
 }
