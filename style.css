@@ -1,5 +1,36 @@
 /*
+ * Simple responsive stylesheet for the Schmidt‑Bau Freiburg website.
+ * The goal is to provide a modern look without adding external dependencies
+ * or complex tooling. The colour palette uses dark blue for the primary
+ * elements, light backgrounds for content areas and a warm accent colour.
+ */
+
+/* Define corporate colour variables */
+:root {
+  --primary-colour: #ECE424;
+  --secondary-colour: #C61800;
+  --text-colour: #1A1A1A;
+}
+
+/* Basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Testimonials Section Styling */
+/*
+ * The testimonials section uses the corporate yellow background to stay
+ * consistent with the rest of the site. Each testimonial is marked up
+ * with a blockquote for semantic meaning, and a decorative opening quote
+ * is inserted via CSS. Authors are styled with the accent colour.
+ */
+.testimonials {
+  background-color: var(--primary-colour);
+  padding: 2rem 0;
+}
+
 .testimonial-grid {
   display: flex;
   flex-direction: column;
@@ -30,26 +61,6 @@
   color: var(--secondary-colour);
 }
 
- * Simple responsive stylesheet for the Schmidt‑Bau Freiburg website.
- * The goal is to provide a modern look without adding external dependencies
- * or complex tooling. The colour palette uses dark blue for the primary
- * elements, light backgrounds for content areas and a warm accent colour.
- */
-
-/* Define corporate colour variables */
-:root {
-  --primary-colour: #ECE424;
-  --secondary-colour: #C61800;
-  --text-colour: #1A1A1A;
-}
-
-/* Basic resets */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -59,7 +70,7 @@ body {
 }
 
 a {
-  color: var(olour);
+  color: var(--secondary-colour);
   text-decoration: none;
 }
 
@@ -120,8 +131,10 @@ a:hover {
  */
 .hero {
   position: relative;
-  /* reference the hero photo shipped in the images directory */
-    background-image: url("hero.png");
+  /* reference the hero photo shipped in the repository root.  Using the
+   * original hero graphic maintains the strong visual impact from earlier
+   * iterations. */
+  background-image: url("hero.png");
   background-size: cover;
   background-position: center;
   color: var(--text-colour);
