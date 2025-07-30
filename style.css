@@ -1,4 +1,35 @@
 /*
+/* Testimonials Section Styling */
+.testimonial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-colour);
+}
+
+.testimonial blockquote::before {
+  content: "\201C";
+  font-size: 3rem;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+  color: var(--secondary-colour);
+}
+
+.testimonial .author {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--secondary-colour);
+}
+
  * Simple responsive stylesheet for the Schmidt‑Bau Freiburg website.
  * The goal is to provide a modern look without adding external dependencies
  * or complex tooling. The colour palette uses dark blue for the primary
