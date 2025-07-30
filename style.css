@@ -28,7 +28,7 @@ body {
 }
 
 a {
-  color: var(--secondary-colour);
+  color: var(olour);
   text-decoration: none;
 }
 
@@ -90,7 +90,7 @@ a:hover {
 .hero {
   position: relative;
   /* reference the hero photo shipped in the images directory */
-  background-image: url("images/hero.jpg");
+    background-image: url("hero.png");
   background-size: cover;
   background-position: center;
   color: var(--text-colour);
