@@ -13,12 +13,21 @@
 /* Root variables for colours */
 :root {
   /* Corporate colours sampled directly from the official Schmidt‑Bau logo */
-  --primary: #ECE424;    /* bright yellow used throughout the logo */
-  --secondary: #D8C820;  /* slightly darker yellow for subtle accents */
-  --accent: #C61800;     /* red square from the logo */
-  --accent-dark: #A11200;/* darker red for hover states */
-  --bg-light: #FFFBE6;   /* soft light yellow for page backgrounds */
-  --text-dark: #111;     /* rich dark colour for maximum contrast */
+  /*
+   * Brand colour definitions
+   *
+   * The primary brand colour (#ECE424) is sampled directly from the
+   * Schmidt‑Bau logo. To ensure a consistent appearance across the
+   * site, all yellows are derived from this value. A slightly
+   * darker tone is used for gradients and subtle accents, while a
+   * light tone provides gentle contrast for section backgrounds.
+   */
+  --primary: #ECE424;      /* exact yellow from the logo */
+  --secondary: #D4C01B;    /* deeper shade of the logo yellow */
+  --accent: #C61800;       /* logo red for buttons and highlights */
+  --accent-dark: #A11200;  /* deeper red for hover states */
+  --bg-light: #FFF8C6;     /* very light tint of the logo yellow for section backgrounds */
+  --text-dark: #111111;    /* strong dark tone for maximum contrast */
 }
 
 /* Global resets */
@@ -81,8 +90,13 @@ a:hover {
 
 /* Hero section */
 .hero {
-  /* Use the abstract hero graphic as a backdrop and overlay with the brand yellow */
-  background-image: linear-gradient(rgba(236,228,36,0.92), rgba(236,228,36,0.92)), url('hero.png');
+  /*
+   * Hero uses the abstract illustration as a backdrop. The
+   * overlay utilises the brand yellow at 88 % opacity to ensure
+   * consistent colour across the site. Use CSS variables for
+   * maintainability.
+   */
+  background-image: linear-gradient(rgba(236, 228, 36, 0.88), rgba(236, 228, 36, 0.88)), url('hero.png');
   background-size: cover;
   background-position: center;
   color: var(--text-dark);
